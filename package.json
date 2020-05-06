@@ -1,0 +1,16 @@
+{
+  "name": "ToDoList_Discord",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "nodemon": "^2.0.3"
+  }
+}
