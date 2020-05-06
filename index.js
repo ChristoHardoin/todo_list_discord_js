@@ -12,6 +12,7 @@ const todo_select = prefix +  env.todo_select // to do select with prefix
 const todo_list = prefix +  env.todo_list // to do list with prefix
 const todo_help = prefix +  env.todo_help // to do help with prefix
 const todo_check = prefix +  env.todo_check // to do check with prefix
+const todo_uncheck = prefix +  env.todo_uncheck // to do uncheck with prefix
 
 // create a new Discord client
 const client = new Discord.Client();
@@ -67,6 +68,18 @@ check_list = function(index) {
     for(let i = 0 ; i < selected_list.input_list.length; i++) {
         if((index - 1) == i) {
             selected_list.input_list[i] = selected_list.input_list[i].trim().replace(/-/g, '✓');
+            console.log(selected_list)
+            return;
+        }
+
+    }
+
+}
+
+uncheck_list = function(index) {
+    for(let i = 0 ; i < selected_list.input_list.length; i++) {
+        if((index - 1) == i) {
+            selected_list.input_list[i] = selected_list.input_list[i].trim().replace(/✓/g, '-');
             console.log(selected_list)
             return;
         }
@@ -203,6 +216,20 @@ client.on('message', message => {
         try{
             var res = message.content.substr(todo_check.length).trim();
             check_list(res);
+            add_todo(res, true);
+
+            message.channel.send(selected_list.list);
+        }
+        catch {
+            message.channel.send("No list selected or does not exist");
+        }
+    }
+
+    // add to do - to uncheck
+    if (message.content.startsWith(todo_uncheck)) {
+        try{
+            var res = message.content.substr(todo_uncheck.length).trim();
+            uncheck_list(res);
             add_todo(res, true);
 
             message.channel.send(selected_list.list);

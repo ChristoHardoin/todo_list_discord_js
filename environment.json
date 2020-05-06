@@ -7,5 +7,6 @@
     "todo_select": "todoselect",
     "todo_list": "todolist",
     "todo_help": "todohelp",
-    "todo_check": "todocheck"
+    "todo_check": "todocheck",
+    "todo_uncheck": "todouncheck"
 }
