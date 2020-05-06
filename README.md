@@ -2,7 +2,9 @@
 
 environment.json file <br>
 
+```
 {
+    "bot_token": "token here",
     "prefix": "&",
     "todo_add": "todoadd",
     "todo_create": "todocreate",
@@ -13,3 +15,4 @@ environment.json file <br>
     "todo_help": "todohelp",
     "todo_check": "todocheck"
 }
+```
