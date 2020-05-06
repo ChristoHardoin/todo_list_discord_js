@@ -121,7 +121,6 @@ delete_all_list = function() {
 // handle received messages
 client.on('message', message => {
 
-
     // Get message user
     user = message.member;
     user = user.toString();
@@ -269,4 +268,4 @@ client.on('message', message => {
 
 
 // login to Discord with your app's token
-client.login(env.bot_token);
+client.login(process.env['API_TOKEN']);
