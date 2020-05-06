@@ -15,7 +15,7 @@ const todo_check = prefix +  env.todo_check // to do check with prefix
 
 // create a new Discord client
 const client = new Discord.Client();
-
+console.log(process.env.API_TOKEN)
 
 
 // Array of list
