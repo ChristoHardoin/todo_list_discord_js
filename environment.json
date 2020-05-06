@@ -1,8 +1,5 @@
-# todo_list_discord_js
-
-environment.json file <br>
-
 {
+    "bot_token": "NzA3MzM3NzUwMTkzMzczMjc1.XrITnw.s02bGP-QGs-iDQrmXYjn5F5kUpY",
     "prefix": "&",
     "todo_add": "todoadd",
     "todo_create": "todocreate",
